@@ -1,5 +1,23 @@
 // https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=kgf%202&key=[YOUR_API_KEY]
+// https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=[YOUR_API_KEY]
+
  const api = "AIzaSyAYqx-PDUhUbTVMXdnZvEgfHUu8mhayscM";
+ 
+const trending = async () =>
+{
+    try{
+        const r= await fetch(` https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&key=${api}`)
+
+        const data1= await r.json();
+        console.log(data1)
+        appendData(data1.items);
+    }
+    catch(err)
+    {
+        console.log(err);
+    }
+}
+trending();
 
 const searchVideo = async () =>
 {
