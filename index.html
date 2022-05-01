@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <style>
+        #showVideos
+        {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        #main
+        {
+            display: flex;
+        }
+        img
+        {
+            height: 30px;
+            width: 40px;
+            margin-top: 25px;
+        }
+        h1
+        {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" alt="">
+    <h1>Youtube </h1>
+    </div>
+    
+  <input type="text" id="query">
+  <button onclick="searchVideo()">Search</button>  
+  <div id="showVideos"></div>
+</body>
+</html>
+
+<script src="main.js"></script>
+
+
+
+<!-- <iframe width="560" height="315"
+ src="https://www.youtube.com/embed/FrdlLPzVzxc" 
+ title="YouTube video player" 
+frameborder="0"
+ allow="accelerometer; autoplay; clipboard-write; 
+ encrypted-media; gyroscope; picture-in-picture" 
+ allowfullscreen></iframe> -->
